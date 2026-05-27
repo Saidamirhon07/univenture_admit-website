@@ -1,0 +1,10 @@
+.DS_Store
+*.mov
+*.pdf
+*.docx
+*.jpg
+*.png
+*.py
+backup_sources.json
+ai_bot/
+old index.html
