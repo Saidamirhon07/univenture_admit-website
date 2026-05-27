@@ -3,6 +3,7 @@
 *.pdf
 *.docx
 *.jpg
+*.jpeg
 *.png
 *.py
 backup_sources.json

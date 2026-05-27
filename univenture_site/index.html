@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<<<<<<< HEAD
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>UniVentureAI — AI Admissions Coach</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,11 +34,26 @@ body{
     radial-gradient(circle at 8% 8%,rgba(255,191,63,.35),transparent 28%),
     radial-gradient(circle at 92% 12%,rgba(126,216,255,.35),transparent 28%),
     linear-gradient(180deg,#fff8ea 0%,#f9fbff 38%,#fff5f9 70%,#f8fffb 100%);
+=======
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>UniVentureAI — Your AI Admissions Strategist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,sans-serif;
+  background:#0a0e1a;
+  color:#f5f1ea;
+>>>>>>> 53b2b163d5da5ed35396b68ceb867b838ab76d79
   overflow-x:hidden;
   cursor:none;
 }
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
+<<<<<<< HEAD
 button,a,.clickable{cursor:none}
 ::selection{background:var(--sun);color:var(--ink)}
 
@@ -206,10 +222,479 @@ footer{padding:50px 0 28px;background:#102033;color:white}.footer-grid{display:g
             <div class="bubble ai">Your strongest angle is not achievement — it is reinvention. Open with the moment you built your first study group.</div>
             <div class="score"><div><b>92%</b><span>clarity</span></div><div><b>87%</b><span>impact</span></div></div>
           </div>
+=======
+
+/* ============ CUSTOM CURSOR ============ */
+.cursor-dot{position:fixed;width:6px;height:6px;background:#d4a574;border-radius:50%;pointer-events:none;z-index:10000;transition:transform .1s;mix-blend-mode:difference}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(212,165,116,.6);border-radius:50%;pointer-events:none;z-index:9999;transition:all .25s cubic-bezier(.4,0,.2,1);transform:translate(-50%,-50%)}
+.cursor-ring.expand{width:80px;height:80px;background:rgba(212,165,116,.1);border-color:#d4a574}
+@media (max-width:900px){.cursor-dot,.cursor-ring{display:none}body{cursor:auto}}
+
+/* ============ PRELOADER ============ */
+.preloader{position:fixed;inset:0;background:#0a0e1a;z-index:9998;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .8s,visibility .8s}
+.preloader.hidden{opacity:0;visibility:hidden}
+.preloader-words{font-family:'Fraunces',serif;font-size:clamp(2rem,7vw,5.5rem);font-weight:300;letter-spacing:-.02em;color:#f5f1ea;text-align:center;line-height:1.1;max-width:90vw}
+.preloader-word{display:inline-block;opacity:0;transform:translateY(40px) rotateX(-30deg);transform-origin:bottom;animation:wordIn .7s cubic-bezier(.2,.8,.2,1) forwards;margin:0 .15em}
+.preloader-word:nth-child(1){animation-delay:.1s}
+.preloader-word:nth-child(2){animation-delay:.35s;color:#d4a574;font-style:italic}
+.preloader-word:nth-child(3){animation-delay:.6s}
+.preloader-word:nth-child(4){animation-delay:.85s}
+.preloader-word:nth-child(5){animation-delay:1.1s;color:#d4a574;font-style:italic}
+.preloader-word:nth-child(6){animation-delay:1.35s}
+@keyframes wordIn{to{opacity:1;transform:translateY(0) rotateX(0)}}
+.preloader-bar{position:absolute;bottom:60px;left:50%;transform:translateX(-50%);width:240px;height:1px;background:rgba(255,255,255,.1);overflow:hidden}
+.preloader-bar::after{content:'';position:absolute;inset:0;background:#d4a574;transform:translateX(-100%);animation:loadBar 2.5s cubic-bezier(.7,0,.3,1) forwards}
+@keyframes loadBar{to{transform:translateX(0)}}
+
+/* ============ NAVIGATION ============ */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:all .4s;backdrop-filter:blur(0)}
+nav.scrolled{background:rgba(10,14,26,.85);backdrop-filter:blur(20px);padding:1rem 3rem;border-bottom:1px solid rgba(255,255,255,.05)}
+.logo{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:500;letter-spacing:-.02em;display:flex;align-items:center;gap:.5rem}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,#d4a574,#b8864e);border-radius:50%;position:relative;overflow:hidden}
+.logo-mark::after{content:'';position:absolute;inset:6px;background:#0a0e1a;border-radius:50%}
+.logo-mark::before{content:'';position:absolute;width:14px;height:14px;top:9px;left:9px;background:#d4a574;border-radius:50%;z-index:1}
+.nav-links{display:flex;gap:2.5rem;font-size:.92rem;font-weight:400}
+.nav-links a{position:relative;opacity:.85;transition:opacity .3s}
+.nav-links a:hover{opacity:1}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:#d4a574;transition:width .3s}
+.nav-links a:hover::after{width:100%}
+.nav-cta{padding:.7rem 1.6rem;background:#d4a574;color:#0a0e1a;border-radius:100px;font-weight:600;font-size:.88rem;transition:all .3s}
+.nav-cta:hover{background:#e8b886;transform:translateY(-1px);box-shadow:0 10px 30px rgba(212,165,116,.3)}
+@media (max-width:900px){nav{padding:1rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}.nav-links{display:none}}
+
+/* ============ HERO ============ */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:8rem 3rem 4rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg::before{content:'';position:absolute;inset:0;background:
+  radial-gradient(ellipse at 20% 30%,rgba(212,165,116,.15),transparent 50%),
+  radial-gradient(ellipse at 80% 70%,rgba(96,165,250,.08),transparent 50%),
+  linear-gradient(180deg,#0a0e1a 0%,#0f1424 100%)}
+.constellation{position:absolute;inset:0;opacity:.6}
+.star{position:absolute;background:#fff;border-radius:50%;animation:twinkle 3s ease-in-out infinite}
+.star.gold{background:#d4a574;box-shadow:0 0 12px rgba(212,165,116,.8)}
+@keyframes twinkle{0%,100%{opacity:.3}50%{opacity:1}}
+
+.hero-content{position:relative;z-index:2;max-width:1300px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.2fr .8fr;gap:5rem;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;color:#d4a574;margin-bottom:2rem;font-weight:500;opacity:0;animation:fadeUp .8s .3s forwards}
+.hero-eyebrow::before{content:'';width:30px;height:1px;background:#d4a574}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.8rem,6vw,5.8rem);font-weight:300;line-height:1.02;letter-spacing:-.035em;margin-bottom:2rem;opacity:0;animation:fadeUp 1s .5s forwards}
+.hero h1 .italic{font-style:italic;font-weight:400;color:#d4a574}
+.hero h1 .strike{position:relative;display:inline-block}
+.hero h1 .strike::after{content:'';position:absolute;left:-5%;right:-5%;top:55%;height:3px;background:#d4a574;transform:scaleX(0);transform-origin:left;animation:strikeIn 1s 2s cubic-bezier(.7,0,.3,1) forwards}
+@keyframes strikeIn{to{transform:scaleX(1)}}
+.hero p.sub{font-size:1.2rem;line-height:1.6;color:rgba(245,241,234,.75);max-width:560px;margin-bottom:2.8rem;font-weight:300;opacity:0;animation:fadeUp 1s .8s forwards}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+.hero-ctas{display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap;opacity:0;animation:fadeUp 1s 1s forwards}
+.btn-primary{padding:1.1rem 2.4rem;background:#d4a574;color:#0a0e1a;border-radius:100px;font-weight:600;font-size:1rem;transition:all .4s cubic-bezier(.2,.8,.2,1);display:inline-flex;align-items:center;gap:.8rem;border:none;cursor:none}
+.btn-primary:hover{background:#e8b886;transform:translateY(-2px);box-shadow:0 20px 50px rgba(212,165,116,.4)}
+.btn-primary svg{transition:transform .3s}
+.btn-primary:hover svg{transform:translateX(4px)}
+.btn-secondary{padding:1.1rem 2rem;color:#f5f1ea;font-weight:500;font-size:1rem;display:inline-flex;align-items:center;gap:.6rem;border-bottom:1px solid rgba(245,241,234,.3);transition:all .3s;cursor:none}
+.btn-secondary:hover{border-color:#d4a574;color:#d4a574}
+
+.hero-stats{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid rgba(245,241,234,.1);opacity:0;animation:fadeUp 1s 1.2s forwards}
+.stat-item .num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:400;color:#d4a574;line-height:1}
+.stat-item .lbl{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,241,234,.6);margin-top:.4rem}
+
+/* Hero right visual */
+.hero-visual{position:relative;height:520px;opacity:0;animation:fadeIn 1.5s 1.2s forwards}
+@keyframes fadeIn{to{opacity:1}}
+.hero-card{position:absolute;background:rgba(255,255,255,.04);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:1.4rem;box-shadow:0 30px 60px rgba(0,0,0,.3)}
+.hero-card-1{top:0;right:0;width:320px;animation:float 6s ease-in-out infinite}
+.hero-card-2{bottom:80px;left:0;width:280px;animation:float 6s ease-in-out infinite 2s}
+.hero-card-3{bottom:0;right:60px;width:240px;animation:float 6s ease-in-out infinite 4s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-card-img{width:100%;height:140px;border-radius:12px;margin-bottom:.8rem;background-size:cover;background-position:center;position:relative;overflow:hidden}
+.hero-card-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.6))}
+.hero-card-1 .hero-card-img{background:linear-gradient(135deg,#1e3a8a,#3b82f6),url('https://images.unsplash.com/photo-1562774053-701939374585?w=400');background-size:cover;background-blend-mode:overlay}
+.hero-card-2 .hero-card-img{background:linear-gradient(135deg,#7c2d12,#dc2626),url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400');background-size:cover;background-blend-mode:overlay}
+.hero-card-3 .hero-card-img{background:linear-gradient(135deg,#14532d,#22c55e),url('https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=400');background-size:cover;background-blend-mode:overlay}
+.hero-card h4{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;margin-bottom:.3rem}
+.hero-card p{font-size:.78rem;color:rgba(245,241,234,.6);line-height:1.5}
+.hero-card .badge{display:inline-block;padding:.2rem .6rem;background:rgba(212,165,116,.15);color:#d4a574;font-size:.68rem;border-radius:100px;margin-bottom:.5rem;letter-spacing:.05em;font-weight:600}
+
+@media (max-width:1100px){.hero-content{grid-template-columns:1fr;gap:3rem}.hero-visual{height:400px;max-width:500px;margin:0 auto}}
+@media (max-width:900px){.hero{padding:7rem 1.5rem 3rem}.hero-stats{gap:1.5rem;flex-wrap:wrap}.hero-card-1{width:260px}.hero-card-2{width:230px;left:-10px}.hero-card-3{width:200px;right:0}}
+
+/* ============ MARQUEE / SOCIAL PROOF ============ */
+.marquee-section{padding:3rem 0;border-top:1px solid rgba(245,241,234,.08);border-bottom:1px solid rgba(245,241,234,.08);background:#0a0e1a;overflow:hidden}
+.marquee-label{text-align:center;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,241,234,.4);margin-bottom:2rem}
+.marquee{display:flex;gap:5rem;animation:scroll 35s linear infinite;white-space:nowrap}
+.marquee:hover{animation-play-state:paused}
+.marquee-item{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:300;color:rgba(245,241,234,.5);font-style:italic;letter-spacing:-.01em}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ============ "IS THIS YOU" QUIZ ============ */
+.quiz-section{padding:8rem 3rem;background:linear-gradient(180deg,#0a0e1a,#0f1424)}
+.quiz-wrap{max-width:980px;margin:0 auto;text-align:center}
+.section-eyebrow{font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:#d4a574;margin-bottom:1.5rem;font-weight:500}
+.quiz-wrap h2{font-family:'Fraunces',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:300;line-height:1.1;letter-spacing:-.025em;margin-bottom:1.5rem}
+.quiz-wrap h2 .italic{font-style:italic;color:#d4a574}
+.quiz-wrap > p{font-size:1.15rem;color:rgba(245,241,234,.7);max-width:620px;margin:0 auto 4rem;line-height:1.6}
+.quiz-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;max-width:780px;margin:0 auto}
+.quiz-item{padding:2rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:16px;text-align:left;cursor:none;transition:all .4s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;gap:1.2rem;position:relative;overflow:hidden}
+.quiz-item::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(212,165,116,.15),transparent);opacity:0;transition:opacity .4s}
+.quiz-item:hover{border-color:rgba(212,165,116,.4);transform:translateY(-3px)}
+.quiz-item:hover::before{opacity:1}
+.quiz-item.active{border-color:#d4a574;background:rgba(212,165,116,.08);box-shadow:0 0 0 1px #d4a574,0 20px 40px rgba(212,165,116,.15)}
+.quiz-check{flex-shrink:0;width:28px;height:28px;border-radius:50%;border:2px solid rgba(245,241,234,.3);display:flex;align-items:center;justify-content:center;transition:all .3s;position:relative;z-index:1}
+.quiz-item.active .quiz-check{background:#d4a574;border-color:#d4a574}
+.quiz-check svg{width:14px;height:14px;stroke:#0a0e1a;stroke-width:3;opacity:0;transition:opacity .3s}
+.quiz-item.active .quiz-check svg{opacity:1}
+.quiz-text{font-size:1rem;font-weight:400;line-height:1.4;position:relative;z-index:1}
+.quiz-result{margin-top:3rem;opacity:0;transform:translateY(20px);transition:all .6s;pointer-events:none}
+.quiz-result.show{opacity:1;transform:translateY(0);pointer-events:auto}
+.quiz-result h3{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:400;margin-bottom:1rem;font-style:italic;color:#d4a574}
+.quiz-result p{font-size:1.05rem;color:rgba(245,241,234,.75);margin-bottom:2rem}
+@media (max-width:768px){.quiz-section{padding:5rem 1.5rem}.quiz-grid{grid-template-columns:1fr}}
+
+/* ============ THE PROBLEM ============ */
+.problem-section{padding:8rem 3rem;background:#0a0e1a;position:relative}
+.problem-wrap{max-width:1200px;margin:0 auto}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.problem-text h2{font-family:'Fraunces',serif;font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:300;line-height:1.1;letter-spacing:-.025em;margin-bottom:2rem}
+.problem-text h2 .italic{font-style:italic;color:#d4a574}
+.problem-text > p{font-size:1.1rem;color:rgba(245,241,234,.7);line-height:1.7;margin-bottom:1.5rem}
+.problem-comparison{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:2.5rem;position:relative}
+.comparison-row{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.comparison-row:last-child{border:none}
+.comparison-label{font-size:.95rem;color:rgba(245,241,234,.65);flex:1}
+.comparison-old{color:rgba(245,241,234,.4);text-decoration:line-through;font-size:.95rem;margin-right:1.5rem}
+.comparison-new{color:#d4a574;font-weight:600;font-family:'Fraunces',serif;font-size:1.2rem}
+.savings-banner{margin-top:2rem;padding:1.5rem;background:linear-gradient(135deg,rgba(212,165,116,.15),rgba(212,165,116,.05));border:1px solid rgba(212,165,116,.3);border-radius:14px;text-align:center}
+.savings-banner .amount{font-family:'Fraunces',serif;font-size:2.8rem;font-weight:400;color:#d4a574;line-height:1}
+.savings-banner .label{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,241,234,.6);margin-top:.5rem}
+@media (max-width:900px){.problem-section{padding:5rem 1.5rem}.problem-grid{grid-template-columns:1fr;gap:3rem}}
+
+/* ============ FEATURES BENTO ============ */
+.features-section{padding:8rem 3rem;background:linear-gradient(180deg,#0a0e1a,#0f1424)}
+.features-wrap{max-width:1300px;margin:0 auto}
+.features-header{text-align:center;max-width:780px;margin:0 auto 5rem}
+.features-header h2{font-family:'Fraunces',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;line-height:1.1;letter-spacing:-.025em;margin-bottom:1.5rem}
+.features-header h2 .italic{font-style:italic;color:#d4a574}
+.features-header p{font-size:1.15rem;color:rgba(245,241,234,.7);line-height:1.6}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1.2rem;grid-auto-rows:minmax(180px,auto)}
+.bento-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:2rem;position:relative;overflow:hidden;transition:all .5s cubic-bezier(.2,.8,.2,1)}
+.bento-card:hover{border-color:rgba(212,165,116,.3);transform:translateY(-4px)}
+.bento-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(212,165,116,.1),transparent 40%);opacity:0;transition:opacity .4s}
+.bento-card:hover::before{opacity:1}
+.bento-1{grid-column:span 4;grid-row:span 2;background:linear-gradient(135deg,rgba(212,165,116,.12),rgba(184,134,78,.04));border-color:rgba(212,165,116,.2)}
+.bento-2{grid-column:span 2;grid-row:span 1}
+.bento-3{grid-column:span 2;grid-row:span 1}
+.bento-4{grid-column:span 2;grid-row:span 2}
+.bento-5{grid-column:span 2;grid-row:span 1}
+.bento-6{grid-column:span 2;grid-row:span 1}
+.bento-7{grid-column:span 3;grid-row:span 1}
+.bento-8{grid-column:span 3;grid-row:span 1}
+.bento-icon{width:48px;height:48px;border-radius:12px;background:rgba(212,165,116,.15);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;color:#d4a574}
+.bento-card h3{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:500;letter-spacing:-.015em;margin-bottom:.7rem;line-height:1.2}
+.bento-1 h3{font-size:2.2rem;font-weight:400}
+.bento-card p{font-size:.92rem;color:rgba(245,241,234,.65);line-height:1.55}
+.bento-1 p{font-size:1.05rem;max-width:90%}
+.bento-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.bento-tag{padding:.35rem .8rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:100px;font-size:.75rem;color:rgba(245,241,234,.7)}
+.bento-visual{position:absolute;right:-20px;bottom:-20px;width:200px;height:200px;opacity:.15;pointer-events:none}
+.bento-1 .bento-visual{font-family:'Fraunces',serif;font-size:14rem;font-weight:200;color:#d4a574;line-height:.7;font-style:italic}
+@media (max-width:1000px){.bento{grid-template-columns:repeat(2,1fr)}.bento-1,.bento-2,.bento-3,.bento-4,.bento-5,.bento-6,.bento-7,.bento-8{grid-column:span 2;grid-row:span 1}.bento-1{padding:2.5rem}}
+@media (max-width:900px){.features-section{padding:5rem 1.5rem}.bento{grid-template-columns:1fr}.bento-1,.bento-2,.bento-3,.bento-4,.bento-5,.bento-6,.bento-7,.bento-8{grid-column:span 1}}
+
+/* ============ HOW IT WORKS ============ */
+.how-section{padding:8rem 3rem;background:#0a0e1a;position:relative}
+.how-wrap{max-width:1200px;margin:0 auto}
+.how-header{text-align:center;margin-bottom:5rem}
+.how-header h2{font-family:'Fraunces',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;line-height:1.1;letter-spacing:-.025em;margin-bottom:1.5rem}
+.how-header h2 .italic{font-style:italic;color:#d4a574}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;position:relative}
+.steps::before{content:'';position:absolute;top:40px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,#d4a574,#d4a574,transparent)}
+.step{text-align:center;position:relative}
+.step-num{width:80px;height:80px;border-radius:50%;background:#0a0e1a;border:1px solid rgba(212,165,116,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 1.8rem;font-family:'Fraunces',serif;font-size:1.6rem;font-weight:400;color:#d4a574;position:relative;z-index:2;transition:all .4s}
+.step:hover .step-num{background:#d4a574;color:#0a0e1a;box-shadow:0 0 30px rgba(212,165,116,.5);transform:scale(1.05)}
+.step h3{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:500;margin-bottom:.8rem;letter-spacing:-.015em}
+.step p{font-size:.92rem;color:rgba(245,241,234,.65);line-height:1.55}
+@media (max-width:900px){.how-section{padding:5rem 1.5rem}.steps{grid-template-columns:1fr;gap:2rem}.steps::before{display:none}}
+
+/* ============ TESTIMONIALS ============ */
+.testi-section{padding:8rem 3rem;background:linear-gradient(180deg,#0f1424,#0a0e1a);overflow:hidden}
+.testi-header{text-align:center;max-width:780px;margin:0 auto 5rem}
+.testi-header h2{font-family:'Fraunces',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;line-height:1.1;letter-spacing:-.025em;margin-bottom:1.5rem}
+.testi-header h2 .italic{font-style:italic;color:#d4a574}
+.testi-track{display:flex;gap:1.5rem;animation:slideTesti 50s linear infinite}
+.testi-track:hover{animation-play-state:paused}
+.testi-card{flex-shrink:0;width:420px;padding:2.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;display:flex;flex-direction:column;justify-content:space-between;min-height:280px}
+.testi-quote{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:300;line-height:1.5;color:#f5f1ea;margin-bottom:2rem;font-style:italic}
+.testi-quote::before{content:'"';font-size:3rem;color:#d4a574;line-height:0;vertical-align:-.3em;margin-right:.1em}
+.testi-author{display:flex;align-items:center;gap:1rem}
+.testi-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#d4a574,#b8864e);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.2rem;color:#0a0e1a;font-weight:500}
+.testi-name{font-weight:600;font-size:.95rem}
+.testi-school{font-size:.82rem;color:#d4a574;margin-top:.15rem}
+@keyframes slideTesti{to{transform:translateX(calc(-100% - 1.5rem))}}
+
+/* ============ LIVE TICKER ============ */
+.ticker-section{padding:3rem 0;background:#0a0e1a;border-top:1px solid rgba(245,241,234,.08);border-bottom:1px solid rgba(245,241,234,.08);overflow:hidden}
+.ticker-label{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:1.5rem;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,241,234,.5)}
+.live-dot{width:8px;height:8px;border-radius:50%;background:#10b981;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(16,185,129,.6)}50%{opacity:.7;box-shadow:0 0 0 8px rgba(16,185,129,0)}}
+.ticker{display:flex;gap:3rem;animation:scroll 30s linear infinite;white-space:nowrap}
+.ticker-item{display:flex;align-items:center;gap:.6rem;color:rgba(245,241,234,.7);font-size:.95rem}
+.ticker-item .arrow{color:#d4a574}
+.ticker-item strong{color:#f5f1ea;font-weight:500}
+
+/* ============ PRICING ============ */
+.pricing-section{padding:8rem 3rem;background:#0a0e1a;position:relative}
+.pricing-wrap{max-width:1100px;margin:0 auto}
+.pricing-header{text-align:center;max-width:780px;margin:0 auto 5rem}
+.pricing-header h2{font-family:'Fraunces',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;line-height:1.1;letter-spacing:-.025em;margin-bottom:1.5rem}
+.pricing-header h2 .italic{font-style:italic;color:#d4a574}
+.pricing-header p{font-size:1.15rem;color:rgba(245,241,234,.7);line-height:1.6}
+.pricing-cards{display:grid;grid-template-columns:1fr 1.1fr;gap:1.5rem}
+.price-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:3rem;position:relative}
+.price-card.featured{background:linear-gradient(135deg,rgba(212,165,116,.08),rgba(184,134,78,.02));border:1px solid rgba(212,165,116,.4);box-shadow:0 30px 80px rgba(212,165,116,.1)}
+.price-badge{position:absolute;top:-12px;right:2rem;padding:.4rem 1rem;background:#d4a574;color:#0a0e1a;border-radius:100px;font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.price-card h3{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:500;margin-bottom:.5rem}
+.price-card .desc{color:rgba(245,241,234,.65);font-size:.95rem;margin-bottom:2rem}
+.price-display{display:flex;align-items:baseline;gap:.8rem;margin-bottom:.5rem}
+.price-old{font-family:'Fraunces',serif;font-size:1.8rem;color:rgba(245,241,234,.35);text-decoration:line-through}
+.price-now{font-family:'Fraunces',serif;font-size:4rem;font-weight:400;color:#d4a574;line-height:1}
+.price-period{color:rgba(245,241,234,.6);font-size:.95rem}
+.price-note{font-size:.85rem;color:rgba(245,241,234,.5);margin-bottom:2rem}
+.price-features{list-style:none;margin-bottom:2.5rem}
+.price-features li{padding:.7rem 0;font-size:.95rem;display:flex;align-items:flex-start;gap:.7rem;color:rgba(245,241,234,.8);border-bottom:1px solid rgba(255,255,255,.05)}
+.price-features li:last-child{border:none}
+.price-features li svg{flex-shrink:0;width:18px;height:18px;color:#d4a574;margin-top:2px}
+.price-cta{display:block;width:100%;padding:1.2rem;background:#d4a574;color:#0a0e1a;border-radius:100px;font-weight:600;font-size:1rem;text-align:center;transition:all .4s;border:none;cursor:none}
+.price-cta:hover{background:#e8b886;transform:translateY(-2px);box-shadow:0 20px 50px rgba(212,165,116,.4)}
+.price-card:not(.featured) .price-cta{background:transparent;color:#f5f1ea;border:1px solid rgba(245,241,234,.2)}
+.price-card:not(.featured) .price-cta:hover{background:rgba(245,241,234,.05);border-color:#d4a574;color:#d4a574;box-shadow:none}
+.price-guarantee{text-align:center;font-size:.85rem;color:rgba(245,241,234,.55);margin-top:1.2rem;display:flex;align-items:center;justify-content:center;gap:.5rem}
+@media (max-width:900px){.pricing-section{padding:5rem 1.5rem}.pricing-cards{grid-template-columns:1fr}.price-card{padding:2.5rem 2rem}.price-now{font-size:3.2rem}}
+
+/* ============ FAQ ============ */
+.faq-section{padding:8rem 3rem;background:linear-gradient(180deg,#0a0e1a,#0f1424)}
+.faq-wrap{max-width:900px;margin:0 auto}
+.faq-header{text-align:center;margin-bottom:4rem}
+.faq-header h2{font-family:'Fraunces',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;line-height:1.1;letter-spacing:-.025em;margin-bottom:1.5rem}
+.faq-header h2 .italic{font-style:italic;color:#d4a574}
+.faq-item{border-bottom:1px solid rgba(245,241,234,.1)}
+.faq-q{padding:1.8rem 0;display:flex;justify-content:space-between;align-items:center;cursor:none;font-family:'Fraunces',serif;font-size:1.3rem;font-weight:400;letter-spacing:-.01em;transition:color .3s}
+.faq-q:hover{color:#d4a574}
+.faq-icon{width:32px;height:32px;flex-shrink:0;border:1px solid rgba(245,241,234,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s;font-size:1.3rem;font-weight:300}
+.faq-item.open .faq-icon{background:#d4a574;color:#0a0e1a;border-color:#d4a574;transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.4,0,.2,1)}
+.faq-a-inner{padding:0 0 1.8rem;color:rgba(245,241,234,.7);line-height:1.7;font-size:1rem}
+.faq-item.open .faq-a{max-height:300px}
+@media (max-width:900px){.faq-section{padding:5rem 1.5rem}.faq-q{font-size:1.1rem}}
+
+/* ============ FINAL CTA ============ */
+.final-cta{padding:10rem 3rem;background:#0a0e1a;position:relative;overflow:hidden;text-align:center}
+.final-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(212,165,116,.15),transparent 60%)}
+.cta-rings{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:1200px;height:1200px;pointer-events:none;opacity:.3}
+.cta-ring{position:absolute;border:1px solid rgba(212,165,116,.2);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+.cta-ring-1{width:300px;height:300px;animation:ringPulse 4s ease-in-out infinite}
+.cta-ring-2{width:600px;height:600px;animation:ringPulse 4s ease-in-out infinite .8s}
+.cta-ring-3{width:900px;height:900px;animation:ringPulse 4s ease-in-out infinite 1.6s}
+@keyframes ringPulse{0%,100%{opacity:.4}50%{opacity:.1}}
+.final-content{position:relative;z-index:1;max-width:780px;margin:0 auto}
+.final-content h2{font-family:'Fraunces',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:300;line-height:1.05;letter-spacing:-.03em;margin-bottom:2rem}
+.final-content h2 .italic{font-style:italic;color:#d4a574}
+.final-content p{font-size:1.2rem;color:rgba(245,241,234,.75);line-height:1.6;margin-bottom:3rem;max-width:560px;margin-left:auto;margin-right:auto}
+.final-content .btn-primary{font-size:1.05rem;padding:1.3rem 2.8rem}
+.final-footer-text{margin-top:2rem;font-size:.88rem;color:rgba(245,241,234,.5);display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap}
+.final-footer-text span{display:inline-flex;align-items:center;gap:.4rem}
+.final-footer-text svg{width:16px;height:16px;color:#d4a574}
+
+/* ============ FOOTER ============ */
+footer{padding:5rem 3rem 2rem;background:#0a0e1a;border-top:1px solid rgba(245,241,234,.08)}
+.footer-wrap{max-width:1300px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:3rem;margin-bottom:4rem}
+.footer-brand p{color:rgba(245,241,234,.65);font-size:.95rem;line-height:1.6;margin-top:1rem;max-width:340px}
+.footer-col h4{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;margin-bottom:1.2rem;color:#d4a574}
+.footer-col a{display:block;color:rgba(245,241,234,.65);font-size:.92rem;margin-bottom:.7rem;transition:color .3s}
+.footer-col a:hover{color:#d4a574}
+.footer-bottom{padding-top:2rem;border-top:1px solid rgba(245,241,234,.08);display:flex;justify-content:space-between;align-items:center;font-size:.85rem;color:rgba(245,241,234,.5);flex-wrap:wrap;gap:1rem}
+.tg-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:rgba(34,158,217,.1);border:1px solid rgba(34,158,217,.3);border-radius:100px;color:#5cc1f0;font-size:.85rem;transition:all .3s}
+.tg-badge:hover{background:rgba(34,158,217,.2);color:#fff}
+@media (max-width:900px){footer{padding:3rem 1.5rem 2rem}.footer-top{grid-template-columns:1fr 1fr;gap:2rem}.footer-bottom{flex-direction:column;text-align:center}}
+
+/* ============ SCROLL REVEAL ============ */
+.reveal{opacity:0;transform:translateY(40px);transition:all 1s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ============ SELECTION ============ */
+::selection{background:#d4a574;color:#0a0e1a}
+</style>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-words">
+    <span class="preloader-word">Your</span>
+    <span class="preloader-word">future</span>
+    <span class="preloader-word">deserves</span>
+    <span class="preloader-word">more</span>
+    <span class="preloader-word">than</span>
+    <span class="preloader-word">luck.</span>
+  </div>
+  <div class="preloader-bar"></div>
+</div>
+
+<!-- Navigation -->
+<nav id="nav">
+  <a href="#" class="logo">
+    <div class="logo-mark"></div>
+    UniVentureAI
+  </a>
+  <div class="nav-links">
+    <a href="#how">How it works</a>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a href="https://t.me/UniVentureAI_bot" class="nav-cta">Start Free Trial</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="constellation" id="constellation"></div>
+  </div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-eyebrow">AI Admissions Strategist · Trusted by 2,400+ students</div>
+      <h1>
+        Get into your <span class="italic">dream</span> university —<br>
+        without the <span class="strike">$5,000</span> consultant.
+      </h1>
+      <p class="sub">UniVentureAI is your personal admissions coach trained on thousands of successful applications. Essay feedback, school matching, application strategy — for $29/month, not $5,000.</p>
+      <div class="hero-ctas">
+        <a href="https://t.me/UniVentureAI_bot" class="btn-primary">
+          Start Free — 1 Day
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#how" class="btn-secondary">See how it works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="num">2,400+</div>
+          <div class="lbl">Students coached</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">94%</div>
+          <div class="lbl">Got into top choice</div>
+        </div>
+        <div class="stat-item">
+          <div class="num">$29</div>
+          <div class="lbl">Per month</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card hero-card-1">
+        <div class="hero-card-img"></div>
+        <div class="badge">PERSONAL STATEMENT</div>
+        <h4>Essay scored: 9.2/10</h4>
+        <p>"Strong vulnerability in paragraph 3. Tighten the conclusion to amplify impact."</p>
+      </div>
+      <div class="hero-card hero-card-2">
+        <div class="hero-card-img"></div>
+        <div class="badge">SCHOOL MATCH</div>
+        <h4>Yale → 78% fit</h4>
+        <p>Based on your essays, ECs, and academic profile.</p>
+      </div>
+      <div class="hero-card hero-card-3">
+        <div class="hero-card-img"></div>
+        <div class="badge">IELTS WRITING</div>
+        <h4>Band 7.5 estimate</h4>
+        <p>Task Response: 8.0 · Lexical: 7.0</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="marquee-section">
+  <div class="marquee-label">Students admitted to</div>
+  <div class="marquee" id="marquee"></div>
+</section>
+
+<!-- QUIZ -->
+<section class="quiz-section">
+  <div class="quiz-wrap">
+    <div class="section-eyebrow">Are you this student?</div>
+    <h2>You're brilliant. <span class="italic">But the system wasn't built for you.</span></h2>
+    <p>Top consultants charge $5,000–$15,000. Their best advice goes to families who can afford it. We're rewriting that story.</p>
+    <div class="quiz-grid">
+      <div class="quiz-item" data-quiz>
+        <div class="quiz-check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="quiz-text">I'm applying to universities abroad and don't know where to start</div>
+      </div>
+      <div class="quiz-item" data-quiz>
+        <div class="quiz-check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="quiz-text">My essay feels generic and I can't figure out why</div>
+      </div>
+      <div class="quiz-item" data-quiz>
+        <div class="quiz-check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="quiz-text">Consultants in my city cost more than my family can afford</div>
+      </div>
+      <div class="quiz-item" data-quiz>
+        <div class="quiz-check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="quiz-text">I need honest feedback — not just polite "good job"</div>
+      </div>
+    </div>
+    <div class="quiz-result" id="quizResult">
+      <h3>That's exactly who we built this for.</h3>
+      <p>UniVentureAI gives you what wealthy students get — strategic, honest, expert feedback — for the price of two coffees.</p>
+      <a href="https://t.me/UniVentureAI_bot" class="btn-primary">
+        Start Your Free Trial
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem-section reveal">
+  <div class="problem-wrap">
+    <div class="problem-grid">
+      <div class="problem-text">
+        <div class="section-eyebrow">The Hidden Inequality</div>
+        <h2>Top universities pick the <span class="italic">best-coached</span> students — not the best students.</h2>
+        <p>A student in Boston with a $5,000 consultant gets 12 rounds of essay feedback, school strategy, and interview prep. A student in Tashkent with the same dreams gets one teacher who graded a few essays.</p>
+        <p>That's not a talent gap. That's a <strong style="color:#d4a574">coaching gap</strong>. And we close it.</p>
+      </div>
+      <div class="problem-comparison">
+        <div style="font-size:.82rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,241,234,.5);margin-bottom:1.5rem">Traditional Consultant vs UniVentureAI</div>
+        <div class="comparison-row">
+          <div class="comparison-label">Monthly cost</div>
+          <div><span class="comparison-old">$1,500</span><span class="comparison-new">$29</span></div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-label">Essay revisions</div>
+          <div><span class="comparison-old">3-5</span><span class="comparison-new">Unlimited</span></div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-label">Response time</div>
+          <div><span class="comparison-old">2-3 days</span><span class="comparison-new">Instant</span></div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-label">Available</div>
+          <div><span class="comparison-old">Weekdays</span><span class="comparison-new">24/7</span></div>
+        </div>
+        <div class="savings-banner">
+          <div class="amount">$4,971</div>
+          <div class="label">Average yearly savings</div>
+>>>>>>> 53b2b163d5da5ed35396b68ceb867b838ab76d79
         </div>
       </div>
     </div>
   </div>
+<<<<<<< HEAD
 </header>
 
 <section class="logo-strip" aria-label="Universities">
@@ -279,10 +764,90 @@ footer{padding:50px 0 28px;background:#102033;color:white}.footer-grid{display:g
       <div class="tool small reveal"><div class="tool-icon">🎨</div><h3>Portfolio Reviewer</h3><p>For CS, design, art, film and business portfolios — stronger curation, stronger story.</p></div>
       <div class="tool small reveal"><div class="tool-icon">✉️</div><h3>Rec Letter Coach</h3><p>Build brag sheets and help recommenders write detailed, specific letters.</p></div>
       <div class="tool small reveal"><div class="tool-icon">🏆</div><h3>Activities Evaluator</h3><p>Turn clubs, projects and jobs into impact bullets with leadership and scale.</p></div>
+=======
+</section>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+  <div class="features-wrap">
+    <div class="features-header reveal">
+      <div class="section-eyebrow">Your full admissions arsenal</div>
+      <h2>Every tool you need. <span class="italic">In your pocket.</span></h2>
+      <p>Nine AI-powered tools trained on thousands of successful applications. From essay diagnostics to school matching to last-minute polishing.</p>
+    </div>
+    <div class="bento">
+      <div class="bento-card bento-1 reveal">
+        <div class="bento-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3>AI Essay Strategist</h3>
+        <p>Upload your draft. Get analysis on narrative depth, emotional authenticity, competitive positioning, and surgical rewrite suggestions. Trained on thousands of essays that got admitted to Harvard, Stanford, MIT, Oxford.</p>
+        <div class="bento-tags">
+          <span class="bento-tag">Personal Statement</span>
+          <span class="bento-tag">Supplementals</span>
+          <span class="bento-tag">Rewrite Mode</span>
+        </div>
+        <div class="bento-visual">✎</div>
+      </div>
+      <div class="bento-card bento-2 reveal">
+        <div class="bento-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>School Finder</h3>
+        <p>Reach, match, safety. Get a real school list based on your stats.</p>
+      </div>
+      <div class="bento-card bento-3 reveal">
+        <div class="bento-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Rec Letter Coach</h3>
+        <p>Build brag sheets and evaluate letters before submission.</p>
+      </div>
+      <div class="bento-card bento-4 reveal">
+        <div class="bento-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Application Plan</h3>
+        <p>A personalized timeline. Deadlines, milestones, what to do this week — all aligned with your target schools.</p>
+        <div class="bento-tags">
+          <span class="bento-tag">Timeline</span>
+          <span class="bento-tag">Deadlines</span>
+        </div>
+      </div>
+      <div class="bento-card bento-5 reveal">
+        <div class="bento-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-6 0v4M5 9h14l-1 12H6L5 9z"/></svg>
+        </div>
+        <h3>EC Evaluator</h3>
+        <p>Turn your activities into impact stories that admissions officers remember.</p>
+      </div>
+      <div class="bento-card bento-6 reveal">
+        <div class="bento-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3>IELTS Writing Bot</h3>
+        <p>Estimated band score + corrections. Text, PDF, or handwritten photo.</p>
+      </div>
+      <div class="bento-card bento-7 reveal">
+        <div class="bento-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Portfolio Reviewer</h3>
+        <p>For CS, design, art, film, business. Get feedback on cohesion, originality, and curation.</p>
+      </div>
+      <div class="bento-card bento-8 reveal">
+        <div class="bento-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <h3>Wow Factor Finder</h3>
+        <p>The unique angle in your story that admissions officers can't ignore.</p>
+      </div>
+>>>>>>> 53b2b163d5da5ed35396b68ceb867b838ab76d79
     </div>
   </div>
 </section>
 
+<<<<<<< HEAD
 <section class="journey" id="how">
   <div class="wrap">
     <div class="section-head reveal">
@@ -294,18 +859,57 @@ footer{padding:50px 0 28px;background:#102033;color:white}.footer-grid{display:g
       <div class="step reveal"><div class="step-num">02</div><h3>Share your profile</h3><p>Tell it your goals, grades, activities, countries and target programs.</p></div>
       <div class="step reveal"><div class="step-num">03</div><h3>Upload your work</h3><p>Paste essays, add school lists, submit IELTS writing or share portfolio links.</p></div>
       <div class="step reveal"><div class="step-num">04</div><h3>Apply sharper</h3><p>Iterate with feedback until your application sounds focused, specific and ready.</p></div>
+=======
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="how-wrap">
+    <div class="how-header reveal">
+      <div class="section-eyebrow">How it works</div>
+      <h2>Four steps. <span class="italic">One acceptance letter.</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h3>Open Telegram</h3>
+        <p>Find UniVentureAI in Telegram — no downloads, no logins. Just start chatting.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <h3>Share your draft</h3>
+        <p>Paste your essay, upload your file, or photograph your handwritten work.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <h3>Get expert feedback</h3>
+        <p>Receive surgical analysis in seconds — like a top consultant, available 24/7.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <h3>Apply with confidence</h3>
+        <p>Iterate, polish, and submit knowing your application is as strong as it can be.</p>
+      </div>
+>>>>>>> 53b2b163d5da5ed35396b68ceb867b838ab76d79
     </div>
   </div>
 </section>
 
+<<<<<<< HEAD
 <section class="testimonials">
   <div class="section-head reveal">
     <span class="eyebrow">Student stories</span>
     <h2>Foreign applicants. Global acceptances. Real momentum.</h2>
+=======
+<!-- TESTIMONIALS -->
+<section class="testi-section">
+  <div class="testi-header reveal">
+    <div class="section-eyebrow">From students like you</div>
+    <h2>Real stories. <span class="italic">Real acceptances.</span></h2>
+>>>>>>> 53b2b163d5da5ed35396b68ceb867b838ab76d79
   </div>
   <div class="testi-track" id="testiTrack"></div>
 </section>
 
+<<<<<<< HEAD
 <section class="ticker-section">
   <div class="ticker-label"><span class="live-dot"></span>Recent acceptance board</div>
   <div class="ticker" id="ticker"></div>
@@ -348,11 +952,70 @@ footer{padding:50px 0 28px;background:#102033;color:white}.footer-grid{display:g
           <li><span class="check">✓</span>24/7 instant responses</li>
         </ul>
         <a href="https://t.me/UniVentureAI_bot" class="price-cta">Get UniVenture Pro</a>
+=======
+<!-- TICKER -->
+<section class="ticker-section">
+  <div class="ticker-label"><span class="live-dot"></span> Live · Recent acceptances</div>
+  <div class="ticker" id="ticker"></div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="pricing-wrap">
+    <div class="pricing-header reveal">
+      <div class="section-eyebrow">Pricing</div>
+      <h2>The cost of one consultant session, <span class="italic">for a whole month.</span></h2>
+      <p>Try free for 1 day. No credit card required. Cancel anytime.</p>
+    </div>
+    <div class="pricing-cards">
+      <div class="price-card reveal">
+        <h3>Free Trial</h3>
+        <p class="desc">Test everything before you commit.</p>
+        <div class="price-display">
+          <div class="price-now" style="font-size:3rem">$0</div>
+          <div class="price-period">for 1 day</div>
+        </div>
+        <div class="price-note">Full access. No card required.</div>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>1 essay evaluation</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Try every tool</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>No commitment</li>
+        </ul>
+        <a href="https://t.me/UniVentureAI_bot" class="price-cta">Start Free</a>
+      </div>
+      <div class="price-card featured reveal">
+        <div class="price-badge">Launch Offer</div>
+        <h3>UniVenture Pro</h3>
+        <p class="desc">Everything you need to get in.</p>
+        <div class="price-display">
+          <span class="price-old">$75</span>
+          <div class="price-now">$29</div>
+          <div class="price-period">/month</div>
+        </div>
+        <div class="price-note">Limited launch pricing. Locked in forever.</div>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Unlimited essay evaluations</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Personal Statement + Supplementals</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>School Finder (Reach/Match/Safety)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Application timeline planner</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Recommendation letter coaching</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>IELTS Writing band predictor</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Portfolio reviews</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Persistent AI memory of your goals</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>24/7 instant responses</li>
+        </ul>
+        <a href="https://t.me/UniVentureAI_bot" class="price-cta">Get UniVenture Pro</a>
+        <div class="price-guarantee">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          7-day money-back guarantee
+        </div>
+>>>>>>> 53b2b163d5da5ed35396b68ceb867b838ab76d79
       </div>
     </div>
   </div>
 </section>
 
+<<<<<<< HEAD
 <section class="faq" id="faq">
   <div class="wrap faq-wrap">
     <div class="section-head reveal">
@@ -386,10 +1049,109 @@ footer{padding:50px 0 28px;background:#102033;color:white}.footer-grid{display:g
       <div><h4>Start</h4><a class="tg-badge" href="https://t.me/UniVentureAI_bot">@UniVentureAI_bot</a></div>
     </div>
     <div class="footer-bottom"><span>© 2026 UniVentureAI. All rights reserved.</span><span>Built for ambitious international applicants.</span></div>
+=======
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="faq-wrap">
+    <div class="faq-header reveal">
+      <div class="section-eyebrow">FAQ</div>
+      <h2>Everything you're <span class="italic">about to ask.</span></h2>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is this actually as good as a real consultant?<div class="faq-icon">+</div></div>
+      <div class="faq-a"><div class="faq-a-inner">For most students, yes — and often better. We're trained on thousands of successful essays from Harvard, Stanford, MIT, Oxford and more. Unlike consultants, we're available 24/7, give unlimited revisions, and never get tired. The difference: a consultant might give one perspective; we synthesize the patterns of thousands.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can it really evaluate my essay accurately?<div class="faq-icon">+</div></div>
+      <div class="faq-a"><div class="faq-a-inner">Yes. Our AI doesn't just check grammar — it analyzes narrative arc, emotional authenticity, competitive positioning, depth gaps, and gives surgical rewrite suggestions. It's coached specifically for selective admissions, not generic writing.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if I don't like it?<div class="faq-icon">+</div></div>
+      <div class="faq-a"><div class="faq-a-inner">7-day money-back guarantee, no questions asked. Plus you get a free day before any payment.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do I need to download anything?<div class="faq-icon">+</div></div>
+      <div class="faq-a"><div class="faq-a-inner">Nope. UniVentureAI lives inside Telegram, which most students already have. One tap and you're chatting with your admissions coach.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is my essay data private?<div class="faq-icon">+</div></div>
+      <div class="faq-a"><div class="faq-a-inner">Completely. Your essays are never used to train models or shared with anyone. The AI remembers your context to give better feedback over time, but only you can see it.</div></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What countries does it work for?<div class="faq-icon">+</div></div>
+      <div class="faq-a"><div class="faq-a-inner">All of them. We specialize in US, UK, Canada, and European admissions but the strategic principles apply to selective universities worldwide.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="cta-rings">
+    <div class="cta-ring cta-ring-1"></div>
+    <div class="cta-ring cta-ring-2"></div>
+    <div class="cta-ring cta-ring-3"></div>
+  </div>
+  <div class="final-content">
+    <h2>Your dream school is <span class="italic">closer than you think.</span></h2>
+    <p>Join 2,400+ students rewriting what's possible. Try free for one day — keep your acceptances forever.</p>
+    <a href="https://t.me/UniVentureAI_bot" class="btn-primary">
+      Start Your Free Trial
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <div class="final-footer-text">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> No credit card</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Cancel anytime</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 7-day guarantee</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-mark"></div>
+          UniVentureAI
+        </a>
+        <p>Democratizing access to elite admissions guidance. Built for students who refuse to let zip codes decide their futures.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="#">Essay guides</a>
+        <a href="#">School guides</a>
+        <a href="#">IELTS resources</a>
+        <a href="#">Success stories</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="mailto:hello@univenture.ai">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 UniVentureAI. All rights reserved.</div>
+      <a href="https://t.me/UniVentureAI_bot" class="tg-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        @UniVentureAI_bot
+      </a>
+    </div>
+>>>>>>> 53b2b163d5da5ed35396b68ceb867b838ab76d79
   </div>
 </footer>
 
 <script>
+<<<<<<< HEAD
 window.addEventListener('load',()=>setTimeout(()=>document.getElementById('preloader').classList.add('hidden'),900));
 
 const dot=document.getElementById('cursorDot');
@@ -400,10 +1162,25 @@ document.addEventListener('mousemove',e=>{
   ring.style.left=x; ring.style.top=y;
 });
 document.querySelectorAll('a,button,.faq-q,.tool,.step,.price-card').forEach(el=>{
+=======
+// ============ PRELOADER ============
+window.addEventListener('load',()=>{
+  setTimeout(()=>{document.getElementById('preloader').classList.add('hidden')},2800);
+});
+
+// ============ CUSTOM CURSOR ============
+const dot=document.getElementById('cursorDot'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'});
+function animateRing(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animateRing)}
+animateRing();
+document.querySelectorAll('a,button,[data-quiz],.faq-q,.quiz-item').forEach(el=>{
+>>>>>>> 53b2b163d5da5ed35396b68ceb867b838ab76d79
   el.addEventListener('mouseenter',()=>ring.classList.add('expand'));
   el.addEventListener('mouseleave',()=>ring.classList.remove('expand'));
 });
 
+<<<<<<< HEAD
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>30));
 
@@ -431,3 +1208,102 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
+=======
+// ============ NAV SCROLL ============
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>30)});
+
+// ============ CONSTELLATION ============
+const con=document.getElementById('constellation');
+const goldStars=[{l:15,t:20},{l:75,t:15},{l:25,t:65},{l:85,t:55},{l:60,t:80},{l:40,t:35},{l:90,t:75},{l:10,t:45},{l:55,t:25},{l:30,t:85},{l:70,t:45},{l:50,t:60}];
+for(let i=0;i<180;i++){
+  const s=document.createElement('div');
+  s.className='star';
+  s.style.left=Math.random()*100+'%';
+  s.style.top=Math.random()*100+'%';
+  const sz=Math.random()*2+.5;
+  s.style.width=sz+'px';s.style.height=sz+'px';
+  s.style.animationDelay=Math.random()*3+'s';
+  con.appendChild(s);
+}
+goldStars.forEach(g=>{
+  const s=document.createElement('div');
+  s.className='star gold';
+  s.style.left=g.l+'%';s.style.top=g.t+'%';
+  s.style.width='4px';s.style.height='4px';
+  s.style.animationDelay=Math.random()*3+'s';
+  con.appendChild(s);
+});
+
+// ============ MARQUEE ============
+const schools=['Harvard','Stanford','MIT','Yale','Oxford','Cambridge','Princeton','Columbia','UC Berkeley','UCLA','NYU','Cornell','Brown','Dartmouth','UPenn','Caltech','UChicago','Duke','Northwestern','Imperial College','LSE','UToronto','McGill','UBC','ETH Zürich'];
+const mq=document.getElementById('marquee');
+const mqHTML=[...schools,...schools,...schools].map(s=>`<div class="marquee-item">${s}</div>`).join('');
+mq.innerHTML=mqHTML;
+
+// ============ QUIZ ============
+const quizItems=document.querySelectorAll('[data-quiz]'),quizResult=document.getElementById('quizResult');
+quizItems.forEach(item=>{
+  item.addEventListener('click',()=>{
+    item.classList.toggle('active');
+    const anyActive=document.querySelectorAll('[data-quiz].active').length>0;
+    quizResult.classList.toggle('show',anyActive);
+  });
+});
+
+// ============ TESTIMONIALS ============
+const testis=[
+  {q:"I rewrote my Common App essay 4 times based on the feedback. Got into Yale REA.",n:"Laylo R.",s:"Yale University '29"},
+  {q:"My consultant in Tashkent quoted $4,000. UniVentureAI gave me better feedback for $29.",n:"Botir K.",s:"Imperial College London"},
+  {q:"The Wow Factor tool found the angle I'd been missing. Changed my whole essay direction.",n:"Sevinch A.",s:"NYU Stern '29"},
+  {q:"IELTS Writing went from 6.5 to 7.5 in three weeks of using the feedback.",n:"Diyora M.",s:"University of Toronto"},
+  {q:"It's like having a Harvard admissions officer in my pocket at 2am.",n:"Akmal T.",s:"UC Berkeley '29"},
+  {q:"My supplements actually sound like me now — just sharper. Accepted at 6/8 schools.",n:"Madina N.",s:"Brown University '29"},
+  {q:"The application timeline kept me from panicking during senior year.",n:"Jamshid R.",s:"University of Edinburgh"},
+  {q:"School Finder showed me schools I'd never considered. One became my dream school.",n:"Aziza K.",s:"Williams College '29"}
+];
+const tt=document.getElementById('testiTrack');
+const ttHTML=[...testis,...testis].map(t=>`<div class="testi-card"><div class="testi-quote">${t.q}</div><div class="testi-author"><div class="testi-avatar">${t.n[0]}</div><div><div class="testi-name">${t.n}</div><div class="testi-school">${t.s}</div></div></div></div>`).join('');
+tt.innerHTML=ttHTML;
+
+// ============ LIVE TICKER ============
+const acceptances=[
+  {n:"Laylo R.",s:"University of Edinburgh",t:"2 mins ago"},
+  {n:"Bobur K.",s:"Yale University",t:"14 mins ago"},
+  {n:"Sevinch A.",s:"NYU Stern",t:"31 mins ago"},
+  {n:"Diyora M.",s:"University of Toronto",t:"47 mins ago"},
+  {n:"Akmal T.",s:"UC Berkeley",t:"1 hr ago"},
+  {n:"Madina N.",s:"Brown University",t:"2 hrs ago"},
+  {n:"Jamshid R.",s:"Imperial College London",t:"3 hrs ago"},
+  {n:"Aziza K.",s:"Williams College",t:"4 hrs ago"},
+  {n:"Sardor I.",s:"Cornell University",t:"5 hrs ago"},
+  {n:"Nigora B.",s:"Dartmouth",t:"6 hrs ago"}
+];
+const tk=document.getElementById('ticker');
+const tkHTML=[...acceptances,...acceptances,...acceptances].map(a=>`<div class="ticker-item"><strong>${a.n}</strong><span class="arrow">→</span>${a.s}<span style="opacity:.5;margin-left:.5rem">${a.t}</span></div>`).join('');
+tk.innerHTML=tkHTML;
+
+// ============ FAQ ============
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>q.parentElement.classList.toggle('open'));
+});
+
+// ============ SCROLL REVEAL ============
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ============ BENTO MOUSE TRACKING ============
+document.querySelectorAll('.bento-card').forEach(c=>{
+  c.addEventListener('mousemove',e=>{
+    const r=c.getBoundingClientRect();
+    c.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+    c.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+  });
+});
+</script>
+
+</body>
+</html>
+>>>>>>> 53b2b163d5da5ed35396b68ceb867b838ab76d79
